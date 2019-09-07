@@ -1,0 +1,20 @@
+def insert(self):
+        aid=1
+        mycursor=mydb.cursor()
+        sql=("insert into CUSTOMERS values(%s,%s,%s,%s,aid)")
+        mycursor.execute(sql)
+        mydb.commit()
+        aid=aid+1
+
+self.Clickhere.clicked.connect(self.insert)
+
+def login_f(self):
+        mycursor=mydb.cursor()
+        mycursor.execute("show tables")
+        result=mycursor.fetchall()
+        print(result)
+        #name=self.textEdit.toPlainText()
+        #password=self.textEdit_2.toPlainText()
+        #print(name,password)
+
+self.Login.clicked.connect(self.login_f)
